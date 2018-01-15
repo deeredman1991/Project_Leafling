@@ -34,7 +34,7 @@ class Critter(Sprite):
         #ALSO: there is a bug with %60... if (and only if) I have to do %60 the minute attribute needs to increment...
         if self._next_tick <= datetime.datetime.now():
             self.speak()
-            self._next_tick = self._next_tick.replace(second = (datetime.datetime.now().second+2)%60)
+            self._next_tick = self._next_tick.replace(second = (self._next_tick.second+2)%60)
             
     def speak(self, msg="Woof Woof!"):
         print(msg)
