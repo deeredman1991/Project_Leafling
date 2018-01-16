@@ -16,6 +16,8 @@ class Meter(Widget):
         )
         self.label.height = self.label.font_size
         self.label.width = self.label.font_size/2*len(self.label.text)
+        #TODO: Do not hard code label.y
+        self.label.y = 0
         self.add_widget(self.label)
         
         self.height = self.label.height
@@ -40,9 +42,6 @@ class Meter(Widget):
     @max_value.setter
     def max_value(self, v):
         self._stat.max_value = v
-        
-    def on_start(self):
-        self.label.y = 50
         
     def _draw_pips(self):
         for pip in self.pips:

@@ -1,5 +1,4 @@
 *.pypirc
-*.bat
 *.pyc
 *.txt
 *.log
