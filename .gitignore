@@ -2,6 +2,7 @@
 *.bat
 *.pyc
 *.txt
+*.log
 
 images/resources/*
 audio/resources/*

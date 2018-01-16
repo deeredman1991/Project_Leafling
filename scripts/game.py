@@ -8,8 +8,10 @@ class Game(Widget):
     def __init__(self):
         super(Game, self).__init__()
         
-        self.critter = Critter()
+        self.critter = Critter('Fuzz')
         self.add_widget(self.critter)
+        
+        #print(self.critter.parent)
         
         #self.critter.speak()
         
