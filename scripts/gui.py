@@ -10,9 +10,10 @@ class Meter(Widget):
         
         self._stat = Stat(self, name, value, max_value)
         
-        self.label = Label( text=self._stat.name,
-                            font_name = 'fonts/PenguinAttack/PenguinAttack.ttf',
-                            font_size = 18
+        self.label = Label( 
+            text=self._stat.name,
+            font_name = 'fonts/PenguinAttack/PenguinAttack.ttf',
+            font_size = 18
         )
         self.label.height = self.label.font_size
         self.label.width = self.label.font_size/2*len(self.label.text)
@@ -50,8 +51,11 @@ class Meter(Widget):
         for i in range(self.max_value):
             if i < self.value:
                 self.pips.append( Sprite(source = 'images/pip.png') )
-                self.pips[i].x = ( self.label.width+( (self.pips[i].width+5)*i ) )
+                
+                self.pips[i].x = ( 
+                    self.label.width+( (self.pips[i].width+5)*i ) )
                 self.pips[i].y = self.y
+                
                 self.add_widget( self.pips[i] )
                 
     def update(self, dt):

@@ -1,6 +1,7 @@
 import unittest
 import sys
-sys.path.append('{}/../..'.format( sys.path[0] )) #Adds the project's root directory to the sys path.
+sys.path.append('{}/../..'.format( sys.path[0] ))  #Adds the project's root 
+                                                   #directory to the sys path.
 
 from scripts.stat import Stat
 
